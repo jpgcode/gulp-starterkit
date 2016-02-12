@@ -1,0 +1,46 @@
+/*--
+ * Global styles
+ * Define here all the styles that needs to be global
+-*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%; // set root font size to ~10px for easy calculation
+}
+
+html {
+    box-sizing: border-box; // subtract padding from declared widths
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.4; // unitless line-height to be based off the element's size
+}
+
+.minimal-nav {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    &__brand {
+        display: inline-block;
+        max-width: 30px;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    &__backlink {
+        font-size: 1.2em;
+        line-height: 2;
+        float: right;
+    }
+}

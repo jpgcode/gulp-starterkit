@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>{{{title}}} | My Project</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+        <!-- build:css4(app/bower_components) assets/styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        
+        <!-- build:css3(.tmp) assets/styles/minimal.css -->
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        
+        <div class="minimal-nav">
+            <a class="minimal-nav__brand" href="index.html">
+                <img src="assets/images/logo.png" class="logo-img" alt="" />
+            </a>
+            {{#isnt title 'Index'}}
+            <a class="minimal-nav__backlink" href="index.html">
+                Back to Index &gt;
+            </a>
+            {{/isnt}}
+        </div>
+
+        {% body %}
+        
+        <!-- build:js4(app/bower_components) assets/scripts/vendor.js -->
+        <!-- bower:js -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js3(app) assets/scripts/main.js -->
+        <!-- endbuild -->
+    </body>
+</html>

@@ -1,0 +1,22 @@
+/*--
+ * Mixins
+ * Define here all the mixins from the project
+-*/
+
+
+// Dynamic Media Queries
+// Modified from https://coderwall.com/p/brz5-g
+
+// 1st argument = breakpoint value
+// 2nd argument (optional) = either 2nd breakpoint value or the word max to make it a max-width query
+@mixin respond-to($val, $val2: none) {
+    @if ($val2 == none) {
+    	@media (min-width: $val) { @content; }
+
+    } @else if ($val2 == max) {
+    	@media (max-width: $val) { @content; }
+
+    } @else {
+    	@media (min-width: $val) and (max-width: $val2) { @content; }
+    }
+}

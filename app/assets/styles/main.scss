@@ -1,0 +1,23 @@
+/*---
+ * Imports
+ * Add all the sass imports from the project in this file
+ * Base global styles = Add all the global stylesheets 
+ * Component styles = Add the stylesheets component related
+ * Page styles = Add the page specific styles
+---*/
+
+
+//Base global styles
+@import 'normalize';
+@import 'vars';
+@import 'mixins';
+@import 'global';
+
+
+//Component styles
+@import '../../components/index-sections/index-sections';
+
+
+//Page styles
+@import '../../pages/index/index';
+@import '../../pages/home/home';

@@ -1,0 +1,73 @@
+<div class="index__sections" data-action="home">
+    <div class="index__section">
+        <h2 class="index__heading2">Reference</h2>
+        <ul class="index__list">
+        	{{#each (pages)}}
+    			{{#is this.data.status 'reference'}}
+                    <li>
+                        <a href="{{ data.src.name }}.html">
+                            {{ data.title }}
+                        </a>
+                        {{#if data.description}}
+                            <span class="description">{{data.description}}</span>
+                        {{/if}}
+                    </li>
+                {{/is}}
+    		{{/each}}
+        </ul>
+    </div>
+
+    <div class="index__section">
+        <h2 class="index__heading2">In Progress</h2>
+        <ul class="index__list">
+        	{{#each (pages)}}
+    			{{#is this.data.status 'in-progress'}}
+                    <li>
+                        <a href="{{ data.src.name }}.html">
+                            {{ data.title }}
+                        </a>
+                        {{#if data.description}}
+                            <span class="description">{{data.description}}</span>
+                        {{/if}}
+                    </li>
+                {{/is}}
+    		{{/each}}
+        </ul>
+    </div>
+
+    <div class="index__section">
+        <h2 class="index__heading2">In Test</h2>
+        <ul class="index__list">
+        	{{#each (pages)}}
+    			{{#is this.data.status 'in-test'}}
+                    <li>
+                        <a href="{{ data.src.name }}.html">
+                            {{ data.title }}
+                        </a>
+                        {{#if data.description}}
+                            <span class="description">{{data.description}}</span>
+                        {{/if}}
+                    </li>
+                {{/is}}
+    		{{/each}}
+        </ul>
+    </div>
+
+    <div class="index__section">
+        <h2 class="index__heading2">Done</h2>
+        <ul class="index__list">
+        	{{#each (pages)}}
+    			{{#is this.data.status 'done'}}
+                    <li>
+                        <a href="{{ data.src.name }}.html">
+                            {{ data.title }}
+                        </a>
+                        {{#if data.description}}
+                            <span class="description">{{data.description}}</span>
+                        {{/if}}
+                    </li>
+                {{/is}}
+    		{{/each}}
+        </ul>
+    </div>
+</div>
