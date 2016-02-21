@@ -2,72 +2,89 @@
     <div class="index__section">
         <h2 class="index__heading2">Reference</h2>
         <ul class="index__list">
-        	{{#each (pages)}}
-    			{{#is this.data.status 'reference'}}
-                    <li>
-                        <a href="{{ data.src.name }}.html">
-                            {{ data.title }}
+        {{!-- {{globalData.jose}} --}}
+        {{!-- {{posts.pager}} --}}
+        {{!-- {{get "view.path"}}
+        {{get "view.relative"}}
+        {{get "view.extname"}} --}}
+        {{!-- {{ pagename }} --}}
+        
+        {{!-- {{get "view.path"}} --}}
+        
+        {{#pages}}
+            {{#withSort items 'data.title'}}
+                {{#is this.data.status 'reference'}}
+                    <li class="i">
+                        <a href="{{pagename}}">
+                            {{this.data.description}}
+                            {{#if data.assignee}}
+                                <span class="assignee">/ {{data.assignee}}</span>
+                            {{/if}}
                         </a>
-                        {{#if data.description}}
-                            <span class="description">{{data.description}}</span>
-                        {{/if}}
                     </li>
                 {{/is}}
-    		{{/each}}
+            {{/withSort}}
+        {{/pages}}
         </ul>
     </div>
 
     <div class="index__section">
         <h2 class="index__heading2">In Progress</h2>
         <ul class="index__list">
-        	{{#each (pages)}}
-    			{{#is this.data.status 'in-progress'}}
-                    <li>
-                        <a href="{{ data.src.name }}.html">
-                            {{ data.title }}
-                        </a>
-                        {{#if data.description}}
-                            <span class="description">{{data.description}}</span>
-                        {{/if}}
-                    </li>
-                {{/is}}
-    		{{/each}}
+        	{{#pages}}
+                {{#withSort items 'data.title'}}
+                    {{#is this.data.status 'in-progress'}}
+                        <li class="i">
+                            <a href="{{pagename}}">
+                                {{this.data.description}}
+                                {{#if data.assignee}}
+                                    <span class="assignee">/ {{data.assignee}}</span>
+                                {{/if}}
+                            </a>
+                        </li>
+                    {{/is}}
+                {{/withSort}}
+            {{/pages}}
         </ul>
     </div>
 
     <div class="index__section">
         <h2 class="index__heading2">In Test</h2>
         <ul class="index__list">
-        	{{#each (pages)}}
-    			{{#is this.data.status 'in-test'}}
-                    <li>
-                        <a href="{{ data.src.name }}.html">
-                            {{ data.title }}
-                        </a>
-                        {{#if data.description}}
-                            <span class="description">{{data.description}}</span>
-                        {{/if}}
-                    </li>
-                {{/is}}
-    		{{/each}}
+        	{{#pages}}
+                {{#withSort items 'data.title'}}
+                    {{#is this.data.status 'in-test'}}
+                        <li class="i">
+                            <a href="{{pagename}}">
+                                {{this.data.description}}
+                                {{#if data.assignee}}
+                                    <span class="assignee">/ {{data.assignee}}</span>
+                                {{/if}}
+                            </a>
+                        </li>
+                    {{/is}}
+                {{/withSort}}
+            {{/pages}}
         </ul>
     </div>
 
     <div class="index__section">
         <h2 class="index__heading2">Done</h2>
         <ul class="index__list">
-        	{{#each (pages)}}
-    			{{#is this.data.status 'done'}}
-                    <li>
-                        <a href="{{ data.src.name }}.html">
-                            {{ data.title }}
-                        </a>
-                        {{#if data.description}}
-                            <span class="description">{{data.description}}</span>
-                        {{/if}}
-                    </li>
-                {{/is}}
-    		{{/each}}
+        	{{#pages}}
+                {{#withSort items 'data.title'}}
+                    {{#is this.data.status 'done'}}
+                        <li class="i">
+                            <a href="{{pagename}}">
+                                {{this.data.description}}
+                                {{#if data.assignee}}
+                                    <span class="assignee">/ {{data.assignee}}</span>
+                                {{/if}}
+                            </a>
+                        </li>
+                    {{/is}}
+                {{/withSort}}
+            {{/pages}}
         </ul>
     </div>
 </div>
