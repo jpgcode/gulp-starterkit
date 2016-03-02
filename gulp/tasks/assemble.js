@@ -1,17 +1,17 @@
 'use strict';
 
-let assemble = require('assemble');
-let app      = assemble();
-let gulp     = require('gulp');
-let config   = require('../config');
-let get      = require('get-value');
-let extname  = require('gulp-extname');
-let plumber  = require('gulp-plumber');
-let flatten  = require('gulp-flatten');
-let helpers  = require('handlebars-helpers')();
+const assemble = require('assemble');
+const app      = assemble();
+const gulp     = require('gulp');
+const config   = require('../config');
+const get      = require('get-value');
+const extname  = require('gulp-extname');
+const plumber  = require('gulp-plumber');
+const flatten  = require('gulp-flatten');
+const helpers  = require('handlebars-helpers')();
 
 
-gulp.task('load', function(cb) {
+gulp.task('load', (cb) => {
 
   //Set main assemble options
   app.option('layout', 'default');
@@ -22,7 +22,7 @@ gulp.task('load', function(cb) {
   app.data(['app/{pages,components,data}/**/*.json']);
   
   //Custom helpers
-  app.helper('get', function(prop) {
+  app.helper('get', (prop) => {
     return get(this.context, prop);
   });
   
@@ -30,7 +30,7 @@ gulp.task('load', function(cb) {
 });
 
 
-gulp.task('assemble', ['load'], function(){
+gulp.task('assemble', ['load'], () => {
     return app.toStream('pages')
       .pipe(app.renderFile())
       .pipe(extname())
@@ -40,7 +40,7 @@ gulp.task('assemble', ['load'], function(){
 });
 
 
-gulp.task('assemble:dist', ['load', 'clean:dist'], function(){
+gulp.task('assemble:dist', ['load', 'clean:dist'], () => {
     return app.toStream('pages')
       .pipe(app.renderFile())
       .pipe(extname())

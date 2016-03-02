@@ -1,11 +1,11 @@
 'use strict';
 
-let gulp     = require('gulp');
-let config   = require('../config');
-let cache    = require('gulp-cache');
-let imagemin = require('gulp-imagemin');
+const gulp     = require('gulp');
+const config   = require('../config');
+const cache    = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
 
-gulp.task('images', function() {
+gulp.task('images', ['clean:dist'],  () => {
     return gulp.src(config.images.all)
         .pipe(cache(imagemin({
             progressive: true,

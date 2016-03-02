@@ -5,8 +5,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "assemble": "~0.9.1",
-    "browser-sync": "^2.11.1",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -17,8 +15,6 @@
     "gulp-filter": "^3.0.1",
     "gulp-flatten": "^0.2.0",
     "gulp-foreach": "^0.1.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-load-plugins": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
@@ -27,7 +23,6 @@
     "gulp-usemin": "^0.3.20",
     "gulp-util": "^3.0.7",
     "main-bower-files": "^2.9.0",
-    "handlebars-helpers": "github:assemble/handlebars-helpers#dev",
     "multimatch": "^2.1.0",
     "run-sequence": "^1.1.5"
   },
@@ -35,8 +30,12 @@
     "node": ">=0.12.2"
   },
   "devDependencies": {
+    "assemble": "~0.9.1",
+    "browser-sync": "^2.11.1",
     "git-guppy": "^1.1.0",
     "gulp-watch": "^4.3.5",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "gulp-imagemin": "^2.4.0",
+    "handlebars-helpers": "github:assemble/handlebars-helpers#dev"
   }
 }

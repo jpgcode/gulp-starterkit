@@ -1,12 +1,12 @@
 'use strict';
 
-let gulp   = require('gulp');
-let config = require('../config');
-let bs 	   = require('browser-sync').create();
+const gulp   = require('gulp');
+const config = require('../config');
+const bs 	   = require('browser-sync').create();
 
 
 //Serve the site from .tmp directory
-gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], function(){
+gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], () => {
 
     bs.init({
       notify: false,
@@ -20,7 +20,7 @@ gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], function(){
     });
 
     gulp.watch([config.html.all, config.images.all], bs.reload);
-    gulp.watch(config.css.all, ['sass', bs.reload]);
+    gulp.watch(config.css.watch, ['sass', bs.reload]);
     gulp.watch(config.hbs.all, ['assemble']);
     gulp.watch(config.fonts.all, ['fonts', bs.reload]);
     gulp.watch(config.js.all, ['eslint', bs.reload]);
@@ -28,7 +28,7 @@ gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], function(){
 });
 
 //Serve the site from the dist directory
-gulp.task('default:dist', function(){
+gulp.task('default:dist', () => {
   bs.init({
     notify: false,
     port: 9000,

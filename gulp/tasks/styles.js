@@ -1,15 +1,14 @@
 'use strict';
 
-let gulp         = require('gulp');
-let config       = require('../config');
-let autoprefixer = require('gulp-autoprefixer');
-let plumber      = require('gulp-plumber');
-let sass         = require('gulp-sass');
-let gutil        = require('gulp-util');
-let sourcemaps   = require('gulp-sourcemaps');
+const gulp         = require('gulp');
+const config       = require('../config');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber      = require('gulp-plumber');
+const sass         = require('gulp-sass');
+const sourcemaps   = require('gulp-sourcemaps');
 
 
-gulp.task('sass', function(){
+gulp.task('sass', () => {
   return gulp.src(config.css.all)
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -24,8 +23,7 @@ gulp.task('sass', function(){
 });
 
 
-gulp.task('sass:dist', ['assemble:dist'], function(){
-  gutil.log(gutil.colors.yellow('Compiling sass'));
+gulp.task('sass:dist', ['assemble:dist'], () => {
   return gulp.src('app/assets/styles/**/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())

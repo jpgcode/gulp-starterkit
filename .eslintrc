@@ -1,6 +1,6 @@
 {
   // http://eslint.org/docs/rules/
-
+  "ecmaVersion": 6,
   "ecmaFeatures": {
     "arrowFunctions": false,                    // enable arrow functions
     "binaryLiterals": false,                    // enable binary literals
@@ -72,7 +72,7 @@
     "no-negated-in-lhs": 0,        // disallow negation of the left operand of an in expression
     "no-obj-calls": 2,             // disallow the use of object properties of the global object (Math and JSON) as functions
     "no-regex-spaces": 2,          // disallow multiple spaces in a regular expression literal
-    "quote-props": 2,              // disallow reserved words being used as object literal keys (off by default)
+    "quote-props": 0,              // disallow reserved words being used as object literal keys (off by default)
     "no-sparse-arrays": 2,         // disallow sparse arrays
     "no-unreachable": 2,           // disallow unreachable statements after a return, throw, continue, or break statement
     "use-isnan": 2,                // disallow comparisons with the value NaN
@@ -185,7 +185,6 @@
     "max-nested-callbacks": 0,        // specify the maximum depth callbacks can be nested (off by default)
     "new-cap": 0,                     // require a capital letter for constructors
     "new-parens": 0,                  // disallow the omission of parentheses when invoking a constructor with no arguments
-    "new-parens": 0,                  // disallow the omission of parentheses when invoking a constructor with no arguments
     "newline-after-var": 0,           // allow/disallow an empty newline after var statement (off by default)
     "no-array-constructor": 0,        // disallow use of the Array constructor
     "no-continue": 0,                 // disallow use of the continue statement (off by default)
@@ -203,7 +202,6 @@
     "operator-assignment": 0,         // require assignment operator shorthand where possible or prohibit it entirely (off by default)
     "operator-linebreak": 0,          // enforce operators to be placed before or after line breaks (off by default)
     "padded-blocks": 0,               // enforce padding within blocks (off by default)
-    "quote-props": 0,                 // require quotes around object literal property names (off by default)
     "quotes": 0,                      // specify whether double or single quotes should be used
     "semi-spacing": 0,                // enforce spacing before and after semicolons
     "semi": 1,                        // require or disallow use of semicolons instead of ASI

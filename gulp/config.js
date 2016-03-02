@@ -10,7 +10,8 @@ module.exports = {
         all: 'app/**/*.{hbs,json}'
     },
     css: {
-    	all: 'app/{assets,components,pages}/**/*.scss',
+    	all: 'app/assets/styles/**/*.scss',
+        watch: 'app/{assets,components,pages}/**/*.scss',
         appDest: '.tmp/assets/styles',
         distDest: 'dist/assets/styles'
     },
@@ -19,7 +20,7 @@ module.exports = {
         vendor: '!app/assets/scripts/vendor/**'
     },
     images: {
-        all: 'app/assets/images/{,*/}*.*',
+        all: 'app/assets/images/**.*',
         distDest: 'dist/assets/images'
     },
     fonts: {

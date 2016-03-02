@@ -1,17 +1,17 @@
 'use strict';
 
-let gulp    = require('gulp');
-let config  = require('../config');
-let plumber = require('gulp-plumber');
-let foreach = require('gulp-foreach');
-let usemin  = require('gulp-usemin');
-let cssnano = require('gulp-cssnano');
-let uglify  = require('gulp-uglify');
+const gulp    = require('gulp');
+const config  = require('../config');
+const plumber = require('gulp-plumber');
+const foreach = require('gulp-foreach');
+const usemin  = require('gulp-usemin');
+const cssnano = require('gulp-cssnano');
+const uglify  = require('gulp-uglify');
 
 
-gulp.task('usemin', ['assemble:dist', 'sass:dist'], function() {
+gulp.task('usemin', ['assemble:dist', 'sass:dist'], () => {
   return gulp.src('dist/**/*.html')
-    .pipe(foreach(function (stream) {
+    .pipe(foreach((stream) => {
       return stream
         .pipe(plumber())
         .pipe(usemin({

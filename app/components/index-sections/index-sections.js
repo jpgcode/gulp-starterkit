@@ -7,7 +7,7 @@ APP.home = (function(){
     var init = function() {
         console.log('APP.home.init');
     };
-
+    
     /*-
      Public functions
     -*/

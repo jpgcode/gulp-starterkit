@@ -1,7 +1,6 @@
 /* ----- index page styles ----- */
 
 .index {
-
     @include respond-to($medium) {
         color:#ff0000;
     }
