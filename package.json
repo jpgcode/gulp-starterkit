@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "git-guppy": "^1.1.0",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "require-dir": "^0.3.0"
   }
 }
