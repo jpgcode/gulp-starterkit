@@ -5,7 +5,7 @@ module.exports = {
     dist: 'dist',
     watchOptions: {
         cwd: '.'
-    }
+    },
     html: {
         all: '.tmp/**/*.html'
     },
