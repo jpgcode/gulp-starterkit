@@ -1,11 +1,15 @@
 ## Gulp Starter Kit
 
-A Yeoman generator to start new projects.
+A project from scratch set with Gulp.
 
-> [Yeoman](http://yeoman.io/) is used as main scaffolding system
+### Features
+
 > [Gulp](http://gulpjs.com/) the task automation tool,
 > [Node.js](https://nodejs.org/) Containing
 > modern web development tools such as 
+> [Handlebars](http://handlebarsjs.com/) template system,
+> [Sass](http://sass-lang.com/) CSS pre processor,
+> [eslint](http://eslint.org/) Javascript linter,
 > [Babel](http://babeljs.io/) and [BrowserSync](http://www.browsersync.io/).
 > Helping you to stay productive following the best practices. A solid starting
 > point for both professionals and newcomers to the industry.
