@@ -6,7 +6,7 @@ const bs 	   = require('browser-sync').create();
 
 
 //Serve the site from .tmp directory
-gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], () => {
+gulp.task('default', ['assemble', 'sass','jsbundle', 'fonts', 'notify:server'], () => {
 
     bs.init({
       notify: false,

@@ -9,7 +9,7 @@ const cssnano = require('gulp-cssnano');
 const uglify  = require('gulp-uglify');
 
 
-gulp.task('usemin', ['assemble:dist', 'sass:dist'], () => {
+gulp.task('usemin', ['assemble:dist', 'sass','jsbundle','jsbundle:dist'], () => {
   return gulp.src('dist/**/*.html')
     .pipe(foreach((stream) => {
       return stream
@@ -17,8 +17,7 @@ gulp.task('usemin', ['assemble:dist', 'sass:dist'], () => {
         .pipe(usemin({
           cssvendor: [cssnano()],
           css: [cssnano()],
-          jsvendor: [uglify()],
-          js: [uglify()]
+          jsvendor: [uglify()]
         }))
         .pipe(gulp.dest(config.dist));
     }));

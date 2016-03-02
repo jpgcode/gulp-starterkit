@@ -21,8 +21,6 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.css.appDest));
 });
-
-
 gulp.task('sass:dist', ['assemble:dist'], () => {
   return gulp.src('app/assets/styles/**/*.scss')
     .pipe(plumber())
