@@ -3,6 +3,9 @@ module.exports = {
     app: 'app',
     tmp: '.tmp',
     dist: 'dist',
+    watchOptions: {
+        cwd: '.'
+    }
     html: {
         all: '.tmp/**/*.html'
     },
@@ -20,11 +23,11 @@ module.exports = {
         vendor: '!app/assets/scripts/vendor/**'
     },
     images: {
-        all: 'app/assets/images/**.*',
+        all: 'app/assets/images/**/*',
         distDest: 'dist/assets/images'
     },
     fonts: {
-        all: 'app/assets/styles/fonts/**/*',
+        all: 'app/assets/styles/fonts/**/*.{eot,svg,ttf,woff,woff2}',
         appDest: '.tmp/assets/styles/fonts',
         distDest: 'dist/assets/styles/fonts'
     }

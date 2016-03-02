@@ -19,11 +19,11 @@ gulp.task('default', ['assemble', 'sass', 'fonts', 'notify:server'], () => {
       }
     });
 
-    gulp.watch([config.html.all, config.images.all], bs.reload);
-    gulp.watch(config.css.watch, ['sass', bs.reload]);
-    gulp.watch(config.hbs.all, ['assemble']);
-    gulp.watch(config.fonts.all, ['fonts', bs.reload]);
-    gulp.watch(config.js.all, ['eslint', bs.reload]);
+    gulp.watch([config.html.all, config.images.all], config.watchOptions, bs.reload);
+    gulp.watch(config.css.watch, config.watchOptions, ['sass', bs.reload]);
+    gulp.watch(config.hbs.all, config.watchOptions, ['assemble']);
+    gulp.watch(config.fonts.all, config.watchOptions, ['fonts', bs.reload]);
+    gulp.watch(config.js.all, config.watchOptions, ['eslint', bs.reload]);
 
 });
 

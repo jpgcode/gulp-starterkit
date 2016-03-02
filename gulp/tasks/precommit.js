@@ -1,10 +1,10 @@
 'use strict';
 
-const gulp  	   = require('gulp');
+const gulp  	 = require('gulp');
 const multimatch = require('multimatch');
 const eslint     = require('gulp-eslint');
 const config     = require('../config');
-const guppy 	   = require('git-guppy')(gulp);
+const guppy 	 = require('git-guppy')(gulp);
 
 
 gulp.task('pre-commit', () => {
@@ -14,7 +14,7 @@ gulp.task('pre-commit', () => {
 
   return gulp.src(filesToTest)
     .pipe(plumber())
-    .pipe($.eslint({ rulePaths: ['/'], configFile: '.eslintrc'}))
-    .pipe($.eslint.format())
-    .pipe($.eslint.failAfterError());
+    .pipe(eslint({ rulePaths: ['/'], configFile: '.eslintrc'}))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
