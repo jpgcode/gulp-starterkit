@@ -14,7 +14,6 @@ const helpers  = require('handlebars-helpers')();
 gulp.task('load', (cb) => {
 
   //Set main assemble options
-  app.option('layout', 'default');
   app.layouts('app/layouts/*.hbs');
   app.pages('app/pages/**/*.hbs');
   app.partials('app/components/**/*.hbs');
