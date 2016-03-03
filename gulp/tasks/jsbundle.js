@@ -9,10 +9,6 @@ const browserify  = require('browserify');
 const source      = require('vinyl-source-stream');
 const buffer      = require('gulp-buffer');
 const exorcist    = require('exorcist');
-<<<<<<< HEAD
-
-=======
->>>>>>> b6c7b5a7a008cf5e9c68bee21b8af9b85efedf7a
 
 gulp.task('jsbundle', () => {
   return browserify({
