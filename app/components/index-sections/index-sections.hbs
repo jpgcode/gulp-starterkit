@@ -2,20 +2,12 @@
     <div class="index__section">
         <h2 class="index__heading2">Reference</h2>
         <ul class="index__list">
-        {{!-- {{globalData.jose}} --}}
-        {{!-- {{posts.pager}} --}}
-        {{!-- {{get "view.path"}}
-        {{get "view.relative"}}
-        {{get "view.extname"}} --}}
-        {{!-- {{ pagename }} --}}
-        
-        {{!-- {{get "view.path"}} --}}
-        
+
         {{#pages}}
             {{#withSort items 'data.title'}}
                 {{#is this.data.status 'reference'}}
                     <li class="i">
-                        <a href="{{pagename}}">
+                        <a href="{{pagename}}.html">
                             {{this.data.description}}
                             {{#if data.assignee}}
                                 <span class="assignee">/ {{data.assignee}}</span>
@@ -35,7 +27,7 @@
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'in-progress'}}
                         <li class="i">
-                            <a href="{{pagename}}">
+                            <a href="{{pagename}}.html">
                                 {{this.data.description}}
                                 {{#if data.assignee}}
                                     <span class="assignee">/ {{data.assignee}}</span>
@@ -55,7 +47,7 @@
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'in-test'}}
                         <li class="i">
-                            <a href="{{pagename}}">
+                            <a href="{{pagename}}.html">
                                 {{this.data.description}}
                                 {{#if data.assignee}}
                                     <span class="assignee">/ {{data.assignee}}</span>
@@ -75,7 +67,7 @@
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'done'}}
                         <li class="i">
-                            <a href="{{pagename}}">
+                            <a href="{{pagename}}.html">
                                 {{this.data.description}}
                                 {{#if data.assignee}}
                                     <span class="assignee">/ {{data.assignee}}</span>

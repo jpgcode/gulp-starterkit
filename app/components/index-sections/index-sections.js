@@ -10,7 +10,7 @@ class IndexSections {
 	eventHandlers(){
 		//Add here all the events
 		const $body = $('body');
-		$body.addClass('test5');
+		$body.addClass('test');
 	}
 
 }

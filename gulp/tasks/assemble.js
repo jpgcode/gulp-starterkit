@@ -5,6 +5,7 @@ const app      = assemble();
 const gulp     = require('gulp');
 const config   = require('../config');
 const get      = require('get-value');
+const _        = require('lodash');
 const extname  = require('gulp-extname');
 const plumber  = require('gulp-plumber');
 const flatten  = require('gulp-flatten');
@@ -20,9 +21,19 @@ gulp.task('load', (cb) => {
   app.engine('hbs', require('engine-handlebars'));
   app.data(['app/{pages,components,data}/**/*.json']);
   
+
+
   //Custom helpers
-  app.helper('get', (prop) => {
+  app.helper('get', function(prop) {
     return get(this.context, prop);
+  });
+
+  app.helper('pagename', function(){
+    let url = get(this.context, 'view.path');;
+    let pagenameArr = url.split('/');
+    let pagename = _.last(pagenameArr);
+        pagename = pagename.split('.')[0];
+    return pagename;
   });
   
   cb();
