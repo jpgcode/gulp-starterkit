@@ -1,5 +1,5 @@
 module.exports = {
-    app: 'app',
+    app: './app',
     tmp: '.tmp',
     dist: 'dist',
     watchOptions: {
@@ -21,11 +21,11 @@ module.exports = {
         basePath: 'assets/scripts',
         all: 'app/{assets,components,pages}/**/*.js',
         vendor: '!app/assets/scripts/vendor/**',
-        entryFile: 'app/assets/scripts/index.js',
-        appOutputPath: '.tmp/assets/scripts',
+        entryFile: './app/assets/scripts/index.js',
+        appOutputPath: './.tmp/assets/scripts',
         distOutputPath: 'dist/assets/scripts',
         outputFile: 'main.js',
-        sourcemapFile : '.tmp/assets/scripts/main.js.map'
+        sourcemapFile : './.tmp/assets/scripts/main.js.map'
     },
     images: {
         all: 'app/assets/images/**/*',

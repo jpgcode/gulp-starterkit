@@ -30,6 +30,7 @@ gulp.task('load', (cb) => {
 
 
 gulp.task('assemble', ['load'], () => {
+
     return app.toStream('pages')
       .pipe(app.renderFile())
       .pipe(extname())

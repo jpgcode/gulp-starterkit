@@ -1,14 +1,16 @@
 'use strict';
 
-const gulp       = require('gulp');
-const config     = require('../config');
-const gutil      = require('gulp-util');
-const path       = require('path');
-const babelify   = require('babelify');
-const browserify = require('browserify');
-const source     = require('vinyl-source-stream');
-const buffer     = require('gulp-buffer');
-const exorcist   = require('exorcist');
+const gulp        = require('gulp');
+const config      = require('../config');
+const gutil       = require('gulp-util');
+const path        = require('path');
+const babelify    = require('babelify');
+const browserify  = require('browserify');
+const source      = require('vinyl-source-stream');
+const buffer      = require('gulp-buffer');
+const exorcist    = require('exorcist');
+const taskListing = require('gulp-task-listing');
+
 
 gulp.task('jsbundle', () => {
   return browserify({
@@ -26,6 +28,7 @@ gulp.task('jsbundle', () => {
   .pipe(buffer())
   .pipe(gulp.dest(config.js.appOutputPath));
 });
+
 gulp.task('jsbundle:dist', () => {
   return browserify({
       paths: [ path.join(__dirname, config.app) ],

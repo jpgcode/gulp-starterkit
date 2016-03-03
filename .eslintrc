@@ -1,30 +1,30 @@
 {
   // http://eslint.org/docs/rules/
-  "ecmaVersion": 6,
+  "parser": "babel-eslint",
   "ecmaFeatures": {
-    "arrowFunctions": false,                    // enable arrow functions
-    "binaryLiterals": false,                    // enable binary literals
-    "blockBindings": false,                     // enable let and const (aka block bindings)
-    "classes": false,                           // enable classes
-    "defaultParams": false,                     // enable default function parameters
-    "destructuring": false,                     // enable destructuring
-    "forOf": false,                             // enable for-of loops
-    "generators": false,                        // enable generators
-    "modules": false,                           // enable modules and global strict mode
-    "objectLiteralComputedProperties": false,   // enable computed object literal property names
-    "objectLiteralDuplicateProperties": false,  // enable duplicate object literal properties in strict mode
-    "objectLiteralShorthandMethods": false,     // enable object literal shorthand methods
-    "objectLiteralShorthandProperties": false,  // enable object literal shorthand properties
-    "octalLiterals": false,                     // enable octal literals
-    "regexUFlag": false,                        // enable the regular expression u flag
-    "regexYFlag": false,                        // enable the regular expression y flag
-    "restParams": false,                        // enable the rest parameters
-    "spread": false,                            // enable the spread operator
-    "superInFunctions": false,                  // enable super references inside of functions
-    "templateStrings": false,                   // enable template strings
-    "unicodeCodePointEscapes": false,           // enable code point escapes
-    "globalReturn": false,                      // allow return statements in the global scope
-    "jsx": false                                // enable JSX
+    "arrowFunctions": true,                    // enable arrow functions
+    "binaryLiterals": true,                    // enable binary literals
+    "blockBindings": true,                     // enable let and const (aka block bindings)
+    "classes": true,                           // enable classes
+    "defaultParams": true,                     // enable default function parameters
+    "destructuring": true,                     // enable destructuring
+    "forOf": true,                             // enable for-of loops
+    "generators": true,                        // enable generators
+    "modules": true,                           // enable modules and global strict mode
+    "objectLiteralComputedProperties": true,   // enable computed object literal property names
+    "objectLiteralDuplicateProperties": true,  // enable duplicate object literal properties in strict mode
+    "objectLiteralShorthandMethods": true,     // enable object literal shorthand methods
+    "objectLiteralShorthandProperties": true,  // enable object literal shorthand properties
+    "octalLiterals": true,                     // enable octal literals
+    "regexUFlag": true,                        // enable the regular expression u flag
+    "regexYFlag": true,                        // enable the regular expression y flag
+    "restParams": true,                        // enable the rest parameters
+    "spread": true,                            // enable the spread operator
+    "superInFunctions": true,                  // enable super references inside of functions
+    "templateStrings": true,                   // enable template strings
+    "unicodeCodePointEscapes": true,           // enable code point escapes
+    "globalReturn": true,                      // allow return statements in the global scope
+    "jsx": true                                // enable JSX
   },
 
   "env": {
@@ -34,7 +34,7 @@
     "mocha": false,       // adds all of the Mocha testing global variables
     "jasmine": false,     // adds all of the Jasmine testing global variables for version 1.3 and 2.0
     "phantomjs": false,   // phantomjs global variables
-    "jquery": false,      // jquery global variables
+    "jquery": true,      // jquery global variables
     "prototypejs": false, // prototypejs global variables
     "shelljs": false,     // shelljs global variables
   },
@@ -114,7 +114,7 @@
     "no-native-reassign": 2,    // disallow reassignments of native objects
     "no-new-func": 2,           // disallow use of new operator for Function object
     "no-new-wrappers": 1,       // disallows creating new instances of String, Number, and Boolean
-    "no-new": 1,                // disallow use of new operator when not part of the assignment or comparison
+    "no-new": 0,                // disallow use of new operator when not part of the assignment or comparison
     "no-octal-escape": 1,       // disallow use of octal escape sequences in string literals, such as var foo = "Copyright \251";
     "no-octal": 1,              // disallow use of octal literals
     "no-param-reassign": 0,     // disallow reassignment of function parameters (off by default)

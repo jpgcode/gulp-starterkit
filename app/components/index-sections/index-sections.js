@@ -1,18 +1,18 @@
 'use strict';
 
-var APP = window.APP = window.APP || {};
+class IndexSections {
 
-APP.home = (function(){
+	constructor() {
+		console.log('IndexSections module initialized');
+		this.eventHandlers();
+	}
 
-    var init = function() {
-        console.log('APP.home.init');
-    };
-    
-    /*-
-     Public functions
-    -*/
-    return {
-        init: init
-    };
+	eventHandlers(){
+		//Add here all the events
+		const $body = $('body');
+		$body.addClass('test5');
+	}
 
-}());
+}
+
+export default IndexSections;

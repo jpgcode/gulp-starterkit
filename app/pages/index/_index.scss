@@ -1,6 +1,8 @@
 /* ----- index page styles ----- */
 
 .index {
+	width: 1024px;
+	margin: 0 auto;
     @include respond-to($medium) {
         color:#ff0000;
     }
