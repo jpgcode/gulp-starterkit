@@ -44,19 +44,10 @@ $ npm install                   # Install Node.js components listed in ./package
 $ bower install                 # Install Bower dependencies listed in ./bower.json
 ```
 
-### Sub generators
-
-You can easily create a page or component using the sub generators
-
-```shell
-$ yo sk:page                    # Create a new page
-$ yo sk:component               # Create a new component
-```
-
 ### Development server
 
 ```shell
-$ gulp serve                     # Start the static node.js server and runs it in browser
+$ gulp                          # Start the static node.js server and runs it in browser
 ```
 
 This will start a light-weight development server with "live reload" and
@@ -69,4 +60,4 @@ $ gulp build                    # This will generate a dist folder
 ```
 
 ---
-Made with ♥ by Jose Pablo Granados ([@jpgcode](https://twitter.com/jpgcode))# gulpAssemble
+Made with ♥ by Jose Pablo Granados ([@jpgcode](https://twitter.com/jpgcode))
