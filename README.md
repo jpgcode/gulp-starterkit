@@ -35,11 +35,13 @@ A project from scratch set with Gulp.
 
 ### Getting Started
 
+Make sure you install [Node.js](https://nodejs.org/en/) and [Gulp](http://gulpjs.com/) installed.
+
 Just clone the repo:
 
 ```shell
-$ git clone -o https://jpgcode@bitbucket.org/jpgcode/starterkit-2.0.git
-$ cd MyApp
+$ git clone -o https://github.com/jpgcode/gulp-starterkit.git
+$ cd MyApp                      # Change MyApp with the name of your app
 $ npm install                   # Install Node.js components listed in ./package.json
 $ bower install                 # Install Bower dependencies listed in ./bower.json
 ```
