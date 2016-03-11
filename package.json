@@ -7,7 +7,6 @@
   "dependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.2",
     "gulp-cssnano": "^2.1.1",
     "gulp-eslint": "^2.0.0",
     "gulp-extname": "^0.2.2",
