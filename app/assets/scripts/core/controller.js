@@ -12,8 +12,6 @@
 // If you want to manually invoke the init method for a component,
 // remove the data-action attribute from the HTML
 
-// test mario
-
 'use strict';
 
 var APP = window.APP = window.APP || {};
@@ -48,12 +46,18 @@ APP.core.controller = (function () {
     };
 
     var executeRouteForElement = function (element) {
-        var namespace = APP;
-        var route = getRoute();
-        var action = 'init';
-        if (route !== '' && namespace[route] && typeof namespace[route][action] === 'function') {
-            namespace[route][action](element);
-        }
+        console.log(element);
+
+        //Modify this method, to instantiate the classes
+
+
+
+        // var namespace = APP;
+        // var route = getRoute();
+        // var action = 'init';
+        // if (route !== '' && namespace[route] && typeof namespace[route][action] === 'function') {
+        //     namespace[route][action](element);
+        // }
     };
 
     var init = function() {
