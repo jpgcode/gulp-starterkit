@@ -1,9 +1,8 @@
 'use strict';
 
-const gulp   = require('gulp');
-const config = require('../config');
-const notify = require('gulp-notify');
-
+import gulp   from 'gulp';
+import config from '../config';
+import notify from 'gulp-notify';
 
 gulp.task('notify:server', () => {
   return gulp.src('./gulpfile.js')

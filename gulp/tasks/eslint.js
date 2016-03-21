@@ -1,9 +1,8 @@
 'use strict';
 
-const gulp   = require('gulp');
-const config = require('../config');
-const eslint = require('gulp-eslint');
-
+import gulp   from 'gulp';
+import config from '../config';
+import eslint from 'gulp-eslint';
 
 gulp.task('eslint', () => {
   return gulp.src([config.js.all, '!app/assets/scripts/vendor/**'])

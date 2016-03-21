@@ -1,9 +1,12 @@
 'use strict';
 
-const gulp   = require('gulp');
-const config = require('../config');
-const bs 	   = require('browser-sync').create();
+import gulp   from 'gulp';
+import config from '../config';
+import bs     from 'browser-sync'; 
 
+
+//Init Browser sync
+bs.create();
 
 //Serve the site from .tmp directory
 gulp.task('default', ['assemble', 'sass','jsbundle', 'fonts', 'notify:server'], () => {

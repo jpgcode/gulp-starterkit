@@ -1,7 +1,7 @@
 'use strict';
 
-const gulp   = require('gulp');
-const config = require('../config');
+import gulp     from 'gulp';
+import config   from '../config';
 
 //Copy assets to dist on build task
 gulp.task('copy:vendorjs', ['clean:dist'], () => {

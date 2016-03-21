@@ -1,9 +1,9 @@
 'use strict';
 
-const gulp   = require('gulp');
-const del    = require('del');
-const config = require('../config');
-const gutil  = require('gulp-util');
+import gulp   from 'gulp';
+import config from '../config';
+import del    from 'del';
+import gutil  from 'gulp-util';
 
 //Copy assets to dist on build task
 gulp.task('clean:dist', () => {

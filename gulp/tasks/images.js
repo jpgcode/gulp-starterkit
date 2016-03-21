@@ -1,8 +1,8 @@
 'use strict';
 
-const gulp     = require('gulp');
-const config   = require('../config');
-const imagemin = require('gulp-imagemin');
+import gulp     from 'gulp';
+import config   from '../config';
+import imagemin from 'gulp-imagemin';
 
 gulp.task('images', ['clean:dist'],  () => {
     return gulp.src(config.images.all)

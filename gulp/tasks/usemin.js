@@ -1,12 +1,12 @@
 'use strict';
 
-const gulp    = require('gulp');
-const config  = require('../config');
-const plumber = require('gulp-plumber');
-const foreach = require('gulp-foreach');
-const usemin  = require('gulp-usemin');
-const cssnano = require('gulp-cssnano');
-const uglify  = require('gulp-uglify');
+import gulp    from 'gulp';
+import config  from '../config';
+import plumber from 'gulp-plumber';
+import foreach from 'gulp-foreach';
+import usemin  from 'gulp-usemin';
+import cssnano from 'gulp-cssnano';
+import uglify  from 'gulp-uglify'; 
 
 
 gulp.task('usemin', ['assemble:dist', 'sass','jsbundle','jsbundle:dist'], () => {

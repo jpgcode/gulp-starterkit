@@ -1,7 +1,7 @@
 'use strict';
 
-const gulp   = require('gulp');
-const config = require('../config');
+import gulp   from 'gulp';
+import config from '../config';
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')(config.fonts.all, () => {})

@@ -1,14 +1,15 @@
 'use strict';
 
-const gulp        = require('gulp');
-const config      = require('../config');
-const gutil       = require('gulp-util');
-const path        = require('path');
-const babelify    = require('babelify');
-const browserify  = require('browserify');
-const source      = require('vinyl-source-stream');
-const buffer      = require('gulp-buffer');
-const exorcist    = require('exorcist');
+import gulp       from 'gulp';
+import config     from '../config';
+import gutil      from 'gulp-util';
+import path       from 'path';
+import babelify   from 'babelify';
+import browserify from 'browserify';
+import source     from 'vinyl-source-stream';
+import buffer     from 'gulp-buffer';
+import exorcist   from 'exorcist';
+
 
 gulp.task('jsbundle', () => {
   return browserify({
@@ -26,6 +27,7 @@ gulp.task('jsbundle', () => {
   .pipe(buffer())
   .pipe(gulp.dest(config.js.appOutputPath));
 });
+
 
 gulp.task('jsbundle:dist', () => {
   return browserify({

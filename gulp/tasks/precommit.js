@@ -1,11 +1,13 @@
 'use strict';
 
-const gulp  	 = require('gulp');
-const multimatch = require('multimatch');
-const eslint     = require('gulp-eslint');
-const config     = require('../config');
-const guppy 	 = require('git-guppy')(gulp);
+import gulp       from 'gulp';
+import config     from '../config';
+import multimatch from 'multimatch';
+import eslint     from 'gulp-eslint';
+import guppy      from 'git-guppy';
 
+//Initialize git guppy
+guppy(gulp);
 
 gulp.task('pre-commit', () => {
 

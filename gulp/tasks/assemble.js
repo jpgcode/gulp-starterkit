@@ -1,15 +1,21 @@
 'use strict';
 
-const assemble = require('assemble');
-const app      = assemble();
-const gulp     = require('gulp');
-const config   = require('../config');
-const get      = require('get-value');
-const _        = require('lodash');
-const extname  = require('gulp-extname');
-const plumber  = require('gulp-plumber');
-const flatten  = require('gulp-flatten');
-const helpers  = require('handlebars-helpers')();
+import assemble from 'assemble';
+import gulp     from 'gulp';
+import config   from '../config';
+import get      from 'get-value';
+import _        from 'lodash';
+import extname  from 'gulp-extname';
+import plumber  from 'gulp-plumber';
+import flatten  from 'gulp-flatten';
+import helpers   from 'handlebars-helpers';
+
+
+//Initialize assemble
+const app = assemble();
+
+//Initialize hbs helpers
+helpers();
 
 
 gulp.task('load', (cb) => {
@@ -21,8 +27,6 @@ gulp.task('load', (cb) => {
   app.engine('hbs', require('engine-handlebars'));
   app.data(['app/{pages,components,data}/**/*.json']);
   
-
-
   //Custom helpers
   app.helper('get', function(prop) {
     return get(this.context, prop);

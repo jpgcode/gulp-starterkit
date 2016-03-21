@@ -1,12 +1,11 @@
 'use strict';
 
-const gulp         = require('gulp');
-const config       = require('../config');
-const autoprefixer = require('gulp-autoprefixer');
-const plumber      = require('gulp-plumber');
-const sass         = require('gulp-sass');
-const sourcemaps   = require('gulp-sourcemaps');
-
+import gulp         from 'gulp';
+import config       from '../config';
+import autoprefixer from 'gulp-autoprefixer';
+import plumber      from 'gulp-plumber';
+import sass         from 'gulp-sass';
+import sourcemaps   from 'gulp-sourcemaps';
 
 gulp.task('sass', () => {
   return gulp.src(config.css.all)
