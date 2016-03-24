@@ -4,8 +4,6 @@
 import Index from './../../../pages/index/index';
 import IndexSections from './../../../components/index-sections/index-sections';
 
-
-
 class Controller {
 
     constructor() {
@@ -31,19 +29,17 @@ class Controller {
 
     initComponents(){
 
-        this.matchingComponents.forEach((component, i) => {
+        this.matchingComponents.forEach((component) => {
 
             let finalName = component.charAt(0).toUpperCase() + component.slice(1);
 
-            //Instantiate dinamically the components
-
+            //Instantiate the components as needed
+            if(finalName === IndexSections.name) new IndexSections();
+            if(finalName === Index.name) new Index();
             
-        
-
         });
 
     }
-    
 
 }
 

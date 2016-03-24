@@ -1,4 +1,4 @@
 //Import and instantiate controller
-import Controller from './core/controller.js';
+import Controller from './core/controller';
 
 new Controller();
