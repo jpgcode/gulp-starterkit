@@ -1,6 +1,6 @@
 ## Gulp Starter Kit [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A project from scratch set with Gulp.
+A project from scratch with Gulp.
 
 ### Features
 
@@ -35,7 +35,7 @@ A project from scratch set with Gulp.
 
 ### Getting Started
 
-Make sure you install [Node.js](https://nodejs.org/en/) and [Gulp](http://gulpjs.com/) installed.
+Make sure you install [Node.js](https://nodejs.org/en/) v5.8.0+, [npm](https://www.npmjs.com/) v3.7.3+ and [Gulp](http://gulpjs.com/) 3.9.1+ installed.
 
 Just clone the repo:
 
