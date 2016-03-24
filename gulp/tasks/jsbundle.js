@@ -11,7 +11,7 @@ import buffer     from 'gulp-buffer';
 import exorcist   from 'exorcist';
 
 
-gulp.task('jsbundle', () => {
+gulp.task('jsbundle', ['eslint'], () => {
   return browserify({
       paths: [ path.join(__dirname, config.app) ],
       entries: config.js.entryFile,

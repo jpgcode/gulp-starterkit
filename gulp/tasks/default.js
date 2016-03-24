@@ -26,7 +26,7 @@ gulp.task('default', ['assemble', 'sass','jsbundle', 'fonts', 'notify:server'], 
     gulp.watch(config.css.watch, config.watchOptions, ['sass', bs.reload]);
     gulp.watch(config.hbs.all, config.watchOptions, ['assemble']);
     gulp.watch(config.fonts.all, config.watchOptions, ['fonts', bs.reload]);
-    gulp.watch(config.js.all, config.watchOptions, ['eslint', 'jsbundle', bs.reload]);
+    gulp.watch(config.js.all, config.watchOptions, ['jsbundle', bs.reload]);
 
 });
 
