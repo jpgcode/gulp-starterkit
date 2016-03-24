@@ -1,18 +1,23 @@
 'use strict';
 
-class IndexSections {
+var APP = window.APP = window.APP || {};
 
-	constructor() {
-		console.log('IndexSections module initialized');
-		this.eventHandlers();
-	}
+APP.indexSections = (function(){
 
-	eventHandlers(){
-		//Add here all the events
-		const $body = $('body');
-		$body.addClass('test');
-	}
+    var bindEventsToUI = function() {
+        // ...
+    };
 
-}
+    var init = function() {
+        console.log('APP.indexSections');
+        bindEventsToUI();
+    };
 
-export default IndexSections;
+    /**
+     * interfaces to public functions
+     */
+    return {
+        init: init
+    };
+
+}());

@@ -1,46 +1,76 @@
+// Simple router/controller that is designed to automatically fire the init()
+// methods for pages and components. The script queries the DOM for all elements
+// that contain the 'data-action' attribute on the parent element.
+
+// For example, let's say we have a component with the following HTML:
+//  <div class="global-header" data-action="globalHeader">
+
+// The controller will parse the data-action attribute value and invoke the
+// method APP.globalHeader.init() within the JavaScript file associated with
+// the component
+
+// If you want to manually invoke the init method for a component,
+// remove the data-action attribute from the HTML
+
 'use strict';
 
-//Import modules
-import Index from './../../../pages/index/index';
-import IndexSections from './../../../components/index-sections/index-sections';
+var APP = window.APP = window.APP || {};
 
-class Controller {
+APP.core = {};
 
-    constructor() {
-        this.componentIdAttribute = 'data-action';
-        this.getDomComponents();
-    }
+APP.core.controller = (function () {
 
-    getDomComponents(){
+    var _route = '';
 
-        this.matchingComponents = [];
+    var setRoute = function (strVal) {
+        _route = strVal;
+    };
 
-        const allElems = document.querySelectorAll('*[data-action]');
-        
-        for (let i = 0; i < allElems.length; ++i) {
-            if (allElems[i].getAttribute(this.componentIdAttribute) !== null) {
-                this.matchingComponents.push(allElems[i].getAttribute(this.componentIdAttribute));
+    var getRoute = function () {
+        return _route;
+    };
+
+
+    var locateRoutableElementsInDOM = function (attribute) {
+        var matchingElements = [];
+        var allElements = document.getElementsByTagName('*');
+        for (var i = 0, n = allElements.length; i < n; i++) {
+            if (allElements[i].getAttribute(attribute) !== null) {
+                // Element exists with attribute. Add to array.
+                matchingElements.push(allElements[i]);
             }
         }
+        return matchingElements;
 
-        this.initComponents();
+    };
 
-    }
+    var executeRouteForElement = function (element) {
+        var namespace = APP;
+        var route = getRoute();
+        var action = 'init';
+        if (route !== '' && namespace[route] && typeof namespace[route][action] === 'function') {
+            namespace[route][action](element);
+        }
+    };
 
-    initComponents(){
+    var init = function() {
 
-        this.matchingComponents.forEach((component) => {
+        var routes = locateRoutableElementsInDOM('data-action');
 
-            let finalName = component.charAt(0).toUpperCase() + component.slice(1);
+        for (var i = 0; i < routes.length; i++) {
+            var element = routes[i];
+            var routeName = element.getAttribute('data-action');
+            setRoute(routeName);
+            console.log('APP.controller.init | APP.' + routeName + '.init() invoked');
+            executeRouteForElement(element);
+        }
+    };
 
-            //Instantiate the components as needed
-            if(finalName === IndexSections.name) new IndexSections();
-            if(finalName === Index.name) new Index();
-            
-        });
+    /**
+    * interfaces to public functions
+    */
+    return {
+        init: init
+    };
 
-    }
-
-}
-
-export default Controller;
+}());
