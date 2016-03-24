@@ -1,0 +1,21 @@
+{
+  "name": "Gulp Startertkit",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jose Pablo Granados <jpgcodecr@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jpgcode/gulpAssemble",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}

@@ -1,23 +1,16 @@
 'use strict';
 
-var APP = window.APP = window.APP || {};
+class Index {
 
-APP.index = (function(){
+    constructor() {
+        console.log('Index page initialized');
+        this.eventHandlers();
+    }
 
-    var bindEventsToUI = function() {
-        // ...
-    };
+    eventHandlers(){
+        
+    }
 
-    var init = function() {
-        console.log('APP.index');
-        bindEventsToUI();
-    };
+}
 
-    /**
-     * interfaces to public functions
-     */
-    return {
-        init: init
-    };
-
-}());
+export default Index;
