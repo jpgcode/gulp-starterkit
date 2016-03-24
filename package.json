@@ -23,7 +23,7 @@
     "run-sequence": "~1.1.5"
   },
   "engines": {
-    "node": ">=0.12.2"
+    "node": ">=5.8.0"
   },
   "devDependencies": {
     "assemble": "~0.9.2",
