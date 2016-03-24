@@ -17,7 +17,7 @@ class Controller {
 
         this.matchingComponents = [];
 
-        const allElems = document.querySelectorAll('*');
+        const allElems = document.querySelectorAll('*[data-action]');
         
         for (let i = 0; i < allElems.length; ++i) {
             if (allElems[i].getAttribute(this.componentIdAttribute) !== null) {
@@ -34,9 +34,11 @@ class Controller {
         this.matchingComponents.forEach((component, i) => {
 
             let finalName = component.charAt(0).toUpperCase() + component.slice(1);
-            
+
             //Instantiate dinamically the components
+
             
+        
 
         });
 
