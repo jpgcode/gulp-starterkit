@@ -6,7 +6,7 @@
     "Jose Pablo Granados <jpgcodecr@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/jpgcode/gulpAssemble",
+  "homepage": "https://github.com/jpgcode/gulp-starterkit",
   "moduleType": [],
   "ignore": [
     "**/.*",
