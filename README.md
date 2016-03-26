@@ -2,7 +2,7 @@
     <img height="326" width="590" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
 </p>
 
-# Gulp Starter Kit
+# Gulp Starter Kit [![Build Status](https://travis-ci.org/jpgcode/gulp-starterkit.svg?branch=master)](https://travis-ci.org/jpgcode/gulp-starterkit)
 
 > A web front end project from scratch with Gulp and other awesome technologies!
 
