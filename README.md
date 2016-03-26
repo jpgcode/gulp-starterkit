@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="http://gulpjs.com">
+    <img height="843" width="500" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
+  </a>
+  <p align="center">The streaming build system</p>
+</p>
+
 # Gulp Starter Kit
 
 > A project from scratch with Gulp for Front End projects.
