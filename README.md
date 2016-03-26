@@ -4,7 +4,7 @@
 
 # Gulp Starter Kit
 
-> A project from scratch with Gulp for Front End projects.
+> A web front end project from scratch with Gulp and other awesome technologies!
 
 ## Features
 
