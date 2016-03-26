@@ -1,5 +1,5 @@
 <p align="center">
-    <img height="350" width="590" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
+    <img height="326" width="590" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
 </p>
 
 # Gulp Starter Kit
