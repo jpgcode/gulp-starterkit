@@ -1,8 +1,8 @@
-## Gulp Starter Kit [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Gulp Starter Kit
 
-A project from scratch with Gulp.
+> A project from scratch with Gulp for Front End projects.
 
-### Features
+## Features
 
 > [Gulp](http://gulpjs.com/) the task automation tool,
 > [Node.js](https://nodejs.org/) Containing
@@ -14,10 +14,9 @@ A project from scratch with Gulp.
 > Helping you to stay productive following the best practices. A solid starting
 > point for both professionals and newcomers to the industry.
 
-### Directory Layout
+## Directory Layout
 
 ```
-.
 ├── /app/                       # The source code of the application
 │   ├── /assets/                # The main folder for assets
 │   ├── /components/            # The application components
@@ -33,7 +32,7 @@ A project from scratch with Gulp.
 └── README.md                   # Important information related
 ```
 
-### Getting Started
+## Getting Started
 
 Make sure you install [Node.js](https://nodejs.org/en/) v5.8.0+, [npm](https://www.npmjs.com/) v3.7.3+ and [Gulp](http://gulpjs.com/) 3.9.1+ installed.
 
@@ -46,7 +45,7 @@ $ npm install                   # Install Node.js components listed in ./package
 $ bower install                 # Install Bower dependencies listed in ./bower.json
 ```
 
-### Development server
+## Development server
 
 ```shell
 $ gulp                          # Start the static node.js server and runs it in browser
@@ -55,11 +54,20 @@ $ gulp                          # Start the static node.js server and runs it in
 This will start a light-weight development server with "live reload" and
 synchronized browsing across multiple devices and browsers.
 
-### Generate dist files
+## Generate dist files
 
 ```shell
-$ gulp build                    # This will generate a dist folder
+$ gulp build                    # This will generate a dist folder ready for production use
 ```
 
----
-Made with ♥ by Jose Pablo Granados ([@jpgcode](https://twitter.com/jpgcode))
+## Authors
+
+**Jose Pablo Granados**
+ 
++ [github/jpgcode](https://github.com/jpgcode)
++ [twitter/jpgcode](http://twitter.com/jpgcode) 
+
+## License
+
+Copyright (c) 2016 Jose Pablo Granados
+Released under the MIT license
