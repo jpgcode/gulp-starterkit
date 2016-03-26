@@ -7,5 +7,5 @@ import notify from 'gulp-notify';
 
 gulp.task('notify:server', () => {
   return gulp.src('./gulpfile.babel.js')
-      .pipe(gutil.env.type !== 'ci' ? notify('Server ready!') : gutil.noop())
+      .pipe(gutil.env.type !== 'ci' ? notify('Server ready!') : gutil.noop());
 });
