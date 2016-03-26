@@ -2,7 +2,6 @@
   <a href="http://gulpjs.com">
     <img height="500" width="843" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
   </a>
-  <p align="center">The streaming build system</p>
 </p>
 
 # Gulp Starter Kit
