@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="http://gulpjs.com">
-    <img height="500" width="843" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
-  </a>
+    <img height="350" width="590" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/gulp-sk.jpg">
 </p>
 
 # Gulp Starter Kit
