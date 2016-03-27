@@ -1,8 +1,8 @@
+# Gulp Starter Kit [![Build Status](https://travis-ci.org/jpgcode/gulp-starterkit.svg?branch=master)](https://travis-ci.org/jpgcode/gulp-starterkit)
+
 <p align="center">
     <img height="326" width="590" src="https://raw.githubusercontent.com/jpgcode/gulp-starterkit/master/app/assets/images/intro.jpg">
 </p>
-
-# Gulp Starter Kit [![Build Status](https://travis-ci.org/jpgcode/gulp-starterkit.svg?branch=master)](https://travis-ci.org/jpgcode/gulp-starterkit)
 
 > A web front end project from scratch with Gulp and other awesome technologies!
 
