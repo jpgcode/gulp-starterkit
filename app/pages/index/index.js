@@ -3,12 +3,11 @@
 class Index {
 
     constructor() {
-        console.log('Index page initialized');
         this.eventHandlers();
     }
 
     eventHandlers(){
-        
+        //Define all the events here...
     }
 
 }

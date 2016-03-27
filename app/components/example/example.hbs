@@ -1,12 +1,19 @@
-<div class="index__sections" data-action="indexSections">
-    <div class="index__section">
-        <h2 class="index__heading2">Reference</h2>
-        <ul class="index__list">
+{{!--
+  This is an example component. You can see examples of how using handlebars custom helpers here.
+  To add it to the page simply reference it in any page with the following syntax:
+  {{> example }}
+--}}
+
+<div class="example" data-action="example">
+
+    <section class="example__section">
+        <h2 class="example__heading2">Reference</h2>
+        <ul class="example__list">
 
         {{#pages}}
             {{#withSort items 'data.title'}}
                 {{#is this.data.status 'reference'}}
-                    <li class="i">
+                    <li>
                         <a href="{{pagename}}.html">
                             {{this.data.description}}
                             {{#if data.assignee}}
@@ -18,15 +25,15 @@
             {{/withSort}}
         {{/pages}}
         </ul>
-    </div>
+    </section>
 
-    <div class="index__section">
-        <h2 class="index__heading2">In Progress</h2>
-        <ul class="index__list">
+    <section class="example__section">
+        <h2 class="example__heading2">In Progress</h2>
+        <ul class="example__list">
         	{{#pages}}
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'in-progress'}}
-                        <li class="i">
+                        <li>
                             <a href="{{pagename}}.html">
                                 {{this.data.description}}
                                 {{#if data.assignee}}
@@ -38,11 +45,11 @@
                 {{/withSort}}
             {{/pages}}
         </ul>
-    </div>
+    </section>
 
-    <div class="index__section">
-        <h2 class="index__heading2">In Test</h2>
-        <ul class="index__list">
+    <section class="example__section">
+        <h2 class="example__heading2">In Test</h2>
+        <ul class="example__list">
         	{{#pages}}
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'in-test'}}
@@ -58,11 +65,11 @@
                 {{/withSort}}
             {{/pages}}
         </ul>
-    </div>
+    </section>
 
-    <div class="index__section">
-        <h2 class="index__heading2">Done</h2>
-        <ul class="index__list">
+    <section class="example__section">
+        <h2 class="example__heading2">Done</h2>
+        <ul class="example__list">
         	{{#pages}}
                 {{#withSort items 'data.title'}}
                     {{#is this.data.status 'done'}}
@@ -78,5 +85,5 @@
                 {{/withSort}}
             {{/pages}}
         </ul>
-    </div>
+    </section>
 </div>

@@ -3,11 +3,11 @@
 .index {
 	width: 1024px;
 	margin: 0 auto;
-    @include respond-to($medium) {
+    @include respond-to($tablet) {
         color:#ff0000;
     }
 
-    @include respond-to($large) {
+    @include respond-to($desktop) {
         color:#333333;
     }
 
