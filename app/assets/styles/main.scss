@@ -1,7 +1,7 @@
 /*---
  * Imports
  * Add all the sass imports from the project in this file
- * Base global styles = Add all the global stylesheets 
+ * Base global styles = Add all the global stylesheets
  * Component styles = Add the stylesheets component related
  * Page styles = Add the page specific styles
 ---*/
@@ -15,7 +15,8 @@
 
 
 //Component styles
-@import '../../components/index-sections/index-sections';
+@import '../../components/example/example';
+@import '../../components/intro/intro';
 
 
 //Page styles
