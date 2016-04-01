@@ -8,7 +8,7 @@ import _        from 'lodash';
 import extname  from 'gulp-extname';
 import plumber  from 'gulp-plumber';
 import flatten  from 'gulp-flatten';
-import helpers   from 'handlebars-helpers';
+import helpers  from 'handlebars-helpers';
 
 
 //Initialize assemble
@@ -26,7 +26,7 @@ gulp.task('load', (cb) => {
   app.partials('app/components/**/*.hbs');
   app.engine('hbs', require('engine-handlebars'));
   app.data(['app/{pages,components,data}/**/*.json']);
-  
+
   //Custom helpers
   app.helper('get', function(prop) {
     return get(this.context, prop);
@@ -39,7 +39,7 @@ gulp.task('load', (cb) => {
         pagename = pagename.split('.')[0];
     return pagename;
   });
-  
+
   cb();
 });
 
