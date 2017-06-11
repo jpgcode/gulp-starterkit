@@ -3,7 +3,7 @@
 import gulp    from 'gulp';
 import config  from '../config';
 import plumber from 'gulp-plumber';
-import foreach from 'gulp-foreach';
+import flatmap from 'gulp-flatmap';
 import usemin  from 'gulp-usemin';
 import cssnano from 'gulp-cssnano';
 import uglify  from 'gulp-uglify';
@@ -11,7 +11,7 @@ import uglify  from 'gulp-uglify';
 
 gulp.task('usemin', ['assemble:dist', 'sass','jsbundle','jsbundle:dist'], () => {
   return gulp.src('dist/**/*.html')
-    .pipe(foreach((stream) => {
+    .pipe(flatmap((stream) => {
       return stream
         .pipe(plumber())
         .pipe(usemin({
