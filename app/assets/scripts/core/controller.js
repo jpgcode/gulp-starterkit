@@ -11,38 +11,24 @@ class Controller {
 
     constructor() {
         this.componentIdAttribute = 'data-action';
-        this.getDomComponents();
+        this.init();
     }
 
-    getDomComponents(){
-
-        this.matchingComponents = [];
-
-        const allElems = document.querySelectorAll('*[data-action]');
-
-        for (let i = 0; i < allElems.length; ++i) {
-            if (allElems[i].getAttribute(this.componentIdAttribute) !== null) {
-                this.matchingComponents.push(allElems[i].getAttribute(this.componentIdAttribute));
-            }
-        }
-
-        this.initComponents();
-
+    init() {
+        const matchingComponents = document.querySelectorAll('*[data-action]');
+        this.initComponents(matchingComponents);
     }
 
-    initComponents(){
+    initComponents(matchingComponents) {
+        [...matchingComponents].forEach((component) => {
+            const componentAttr = component.getAttribute(this.componentIdAttribute);
+            const finalName = componentAttr.charAt(0) + componentAttr.slice(1);
 
-        this.matchingComponents.forEach((component) => {
-
-            let finalName = component.charAt(0).toUpperCase() + component.slice(1);
-
-            //Instantiate the components as needed
-            if(finalName === Example.name) new Example();
-            if(finalName === Intro.name) new Intro();
-            if(finalName === Index.name) new Index();
-
+            // Call the components as needed
+            if(finalName === Example.name.toLowerCase()) new Example();
+            if(finalName === Intro.name.toLowerCase()) new Intro();
+            if(finalName === Index.name.toLowerCase()) new Index();
         });
-
     }
 
 }
