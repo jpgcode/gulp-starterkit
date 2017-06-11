@@ -1,0 +1,5 @@
+**/vendor/**/*.js
+node_modules
+node_modules_custom
+public
+test

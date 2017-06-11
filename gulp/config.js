@@ -20,7 +20,7 @@ module.exports = {
     js: {
         basePath: 'assets/scripts',
         all: 'app/{assets,components,pages}/**/*.js',
-        vendor: '!app/assets/scripts/vendor/**',
+        vendor: 'app/assets/scripts/vendor/**',
         entryFile: './app/assets/scripts/global.js',
         appOutputPath: './.tmp/assets/scripts',
         distOutputPath: 'dist/assets/scripts',

@@ -6,8 +6,12 @@ class Index {
         this.eventHandlers();
     }
 
-    eventHandlers(){
+    eventHandlers() {
         //Define all the events here...
+        let a = () => {
+            console.log('Mario123');
+        };
+        a();
     }
 
 }
