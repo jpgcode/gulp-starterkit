@@ -9,7 +9,7 @@ class Index {
     eventHandlers() {
         //Define all the events here...
         let a = () => {
-            console.log('Mario123');
+            console.log('Test');
         };
         a();
     }

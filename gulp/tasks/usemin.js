@@ -6,7 +6,7 @@ import plumber from 'gulp-plumber';
 import foreach from 'gulp-foreach';
 import usemin  from 'gulp-usemin';
 import cssnano from 'gulp-cssnano';
-import uglify  from 'gulp-uglify'; 
+import uglify  from 'gulp-uglify';
 
 
 gulp.task('usemin', ['assemble:dist', 'sass','jsbundle','jsbundle:dist'], () => {
@@ -15,9 +15,9 @@ gulp.task('usemin', ['assemble:dist', 'sass','jsbundle','jsbundle:dist'], () => 
       return stream
         .pipe(plumber())
         .pipe(usemin({
-          cssvendor: [cssnano()],
-          css: [cssnano()],
-          jsvendor: [uglify()]
+            cssvendor: [cssnano()],
+            css: [cssnano()],
+            jsvendor: [uglify()]
         }))
         .pipe(gulp.dest(config.dist));
     }));
